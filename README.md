@@ -1,2 +1,2 @@
 # website
-The public facing website for UB/OK
+The public-facing website for UB/OK
