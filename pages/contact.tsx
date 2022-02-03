@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import s from '../styles/Contact.module.scss'
+import Layout from '../components/Layout'
+import s from '../styles/contact.module.scss'
 
 
 const Contact: NextPage = () => {
     return (
-        <div className={s.container}>
+        <Layout>
             <Head>
                 <title>Contact us - UB-OK</title>
                 <meta name="description" content="UB/OK" />
@@ -15,11 +16,7 @@ const Contact: NextPage = () => {
             <main className={s.main}>
                 Contact us.
             </main>
-
-            <footer className={s.footer}>
-                
-            </footer>
-        </div>
+        </Layout>
     )
 }
 

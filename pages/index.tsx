@@ -1,26 +1,28 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import s from '../styles/Home.module.scss'
+import Layout from '../components/Layout'
+import s from '../styles/home.module.scss'
 
 
 const Home: NextPage = () => {
     return (
-        <div className={s.container}>
+        <Layout>
             <Head>
                 <title>Home - UB-OK</title>
                 <meta name="description" content="UB/OK" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={s.main}>
-                Hiya.
-            </main>
-
-            <footer className={s.footer}>
-                
-            </footer>
-        </div>
+            <div className={s.screenshotContainer}>
+                <Image
+                    src="/images/screenshot.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="A screenshot of the UB-OK app, featuring a conversation between a user and the chatbot. The chatbot has told the user they have reached a two-day streak, and has suggested new topics for discussion, such as dealing with panic attacks."
+                />
+            </div>
+        </Layout>
     )
 }
 
