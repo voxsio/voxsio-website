@@ -1,12 +1,49 @@
+@import 'vars.module';
+
 .container {
+    position: relative;
     display: flex;
     flex-direction: row;
     height: 100vh;
     width: 100vw;
 
+    header {
+        position: fixed;
+        width: 340px;
+        height: 100vh;
+        padding: 2rem 3rem;
+        z-index: 100;
+    }
+
+    h1 {
+        font-family: 'Aclonica', sans-serif;
+        font-size: 4rem;
+        color: $red;
+        text-shadow: 3px 1px $blue;
+        transition: $transition;
+
+        &:hover {
+            color: $yellow;
+        }
+
+        &:active {
+            text-shadow: none;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+
+        a {
+            margin-bottom: 1rem;
+        }
+    }
+
     main {
         position: relative;
         width: 100%;
-        padding: 5rem 0;
+        padding: 5rem 0 5rem 340px;
     }
 }

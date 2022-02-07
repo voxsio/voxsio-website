@@ -12,6 +12,11 @@ html, body {
 }
 
 a {
-    color: inherit;
+    color: $blue;
     text-decoration: none;
+    transition: $transition;
+
+    &:hover, &.active {
+        font-weight: bold;
+    }
 }

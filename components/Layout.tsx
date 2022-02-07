@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import s from '../styles/layout.module.scss'
 
 
@@ -7,19 +8,32 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+    const router = useRouter();
+
     return (
         <div className={s.container}>
             <header>
-                <h1>UB-OK</h1>
+                <Link href="/">
+                    <a className={router.pathname === "/" ? "active" : ""}>
+                        <h1>UB-OK</h1>
+                    </a>
+                </Link>
+                
                 <nav>
                     <Link href="/">
-                        <a>Home</a>
+                        <a className={router.pathname === "/" ? "active" : ""}>
+                            Home
+                        </a>
                     </Link>
                     <Link href="/about">
-                        <a>About</a>
+                        <a className={router.pathname === "/about" ? "active" : ""}>
+                            About
+                        </a>
                     </Link>
                     <Link href="/contact">
-                        <a>Contact us</a>
+                        <a className={router.pathname === "/contact" ? "active" : ""}>
+                            Contact us
+                        </a>
                     </Link>
                 </nav>
             </header>

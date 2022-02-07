@@ -20,6 +20,7 @@ const Home: NextPage = () => {
                     layout="fill"
                     objectFit="contain"
                     alt="A screenshot of the UB-OK app, featuring a conversation between a user and the chatbot. The chatbot has told the user they have reached a two-day streak, and has suggested new topics for discussion, such as dealing with panic attacks."
+                    priority
                 />
             </div>
         </Layout>
