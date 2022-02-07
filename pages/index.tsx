@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     return (
         <Layout>
             <Head>
-                <title>Home - UB-OK</title>
+                <title>UB-OK - Home</title>
                 <meta name="description" content="UB/OK" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

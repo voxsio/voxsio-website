@@ -8,7 +8,7 @@ const Contact: NextPage = () => {
     return (
         <Layout>
             <Head>
-                <title>Contact us - UB-OK</title>
+                <title>UB-OK - Contact us</title>
                 <meta name="description" content="UB/OK" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

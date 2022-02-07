@@ -37,7 +37,97 @@
         padding-left: 2rem;
 
         a {
+            width: fit-content;
             margin-bottom: 1rem;
+        }
+    }
+
+    aside {
+        position: absolute;
+        bottom: 5rem;
+        width: 100%;
+        height: 200px;
+        border: 2px solid $night;
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        .signUp {
+            position: absolute;
+            top: -1rem;
+            left: -0.5rem;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: $night;
+            background-color: $light;
+        }
+
+        .getAccess {
+            color: black;
+
+            .manicule {
+                font-size: 1.5rem;
+                line-height: 0.5;
+                position: relative;
+                top: 3px;
+            }
+
+            .preview {
+                font-weight: 900;
+            }
+        }
+
+        form {
+            width: 100%;
+            margin-top: 1rem;
+
+            input {
+                width: 100%;
+                height: 2rem;
+                background-color: $lightD;
+                border: 2px solid $nightL;
+                border-radius: 0.5rem;
+                padding: 0 0.5rem;
+
+                &:focus {
+                    outline: none;
+                    border-color: $red;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+
+                input {
+                    width: 49%;
+                }
+            }
+
+            button {
+                float: right;
+                margin-top: 0.5rem;
+                background-color: $red;
+                border: 2px solid $redD;
+                border-bottom-width: 4px;
+                border-radius: 0.75rem;
+                padding: 0.5rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+
+                &:active {
+                    border-bottom-width: 2px;
+                    margin-top: calc(0.5rem + 2px);
+                }
+            }
         }
     }
 

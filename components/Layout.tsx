@@ -36,6 +36,20 @@ const Layout = ({ children }: LayoutProps) => {
                         </a>
                     </Link>
                 </nav>
+
+                <aside>
+                    <span className={s.signUp}>Sign up now&nbsp;</span>
+                    <span className={s.getAccess}><span className={s.manicule}>&#9758;</span> to get access to the <span className={s.preview}>free preview</span></span>
+                    
+                    <form>
+                        <div className="formGroup">
+                            <input type="text" name="firstName" placeholder="First name" required />
+                            <input type="text" name="lastName" placeholder="Last name" required />
+                        </div>
+                        <input type="email" name="email" placeholder="Email" required />
+                        <button type="submit">Sign up</button>
+                    </form>
+                </aside>
             </header>
 
             <main>

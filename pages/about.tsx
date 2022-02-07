@@ -8,7 +8,7 @@ const About: NextPage = () => {
     return (
         <Layout>
             <Head>
-                <title>About - UB-OK</title>
+                <title>UB-OK - About</title>
                 <meta name="description" content="UB/OK" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
