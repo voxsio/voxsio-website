@@ -5,6 +5,11 @@
     font-family: 'nunito', sans-serif;
 }
 
+::selection {
+    background-color: $blue;
+    color: white;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -18,5 +23,63 @@ a {
 
     &:hover, &.active {
         font-weight: bold;
+    }
+}
+
+button {
+    float: right;
+    margin-top: 0.5rem;
+    background-color: $red;
+    border: 2px solid $redD;
+    border-bottom-width: 4px;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        border-bottom-width: 2px;
+        margin-top: calc(0.5rem + 2px);
+    }
+}
+
+input, textarea {
+    width: 100%;
+    background-color: $lightD;
+    border: 2px solid $nightL;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+
+    &:focus {
+        outline: none;
+        border-color: $red;
+    }
+}
+
+input {
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+textarea {
+    min-height: 100px;
+    padding: 0.5rem;
+    resize: vertical;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+        width: 49%;
     }
 }

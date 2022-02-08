@@ -38,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
                 </nav>
 
                 <aside>
-                    <span className={s.signUp}>Sign up now&nbsp;</span>
+                    <span className={s.signUp}>Sign up now!</span>
                     <span className={s.getAccess}><span className={s.manicule}>&#9758;</span> to get access to the <span className={s.preview}>free preview</span></span>
                     
                     <form>

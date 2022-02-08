@@ -13,9 +13,19 @@ const About: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={s.main}>
-                About.
-            </main>
+            <div className={s.about}>
+                <p>
+                    <b>UB-OK</b> is a digital mental health start-up based in Edinburgh, Scotland
+                </p>
+
+                <p>
+                    For the past few years, we have been developing intelligent conversational technology towards improving mental health
+                </p>
+
+                <p>
+                    Our team have backgrounds in couselling, business, technology, psychology and design
+                </p>
+            </div>
         </Layout>
     )
 }

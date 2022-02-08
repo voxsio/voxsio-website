@@ -13,9 +13,19 @@ const Contact: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={s.main}>
-                Contact us.
-            </main>
+            <div className={s.container}>
+                <p>Get in touch! We'd love to hear from you.</p>
+
+                <form>
+                    <div className="formGroup">
+                        <input type="text" name="firstName" placeholder="First name" required />
+                        <input type="text" name="lastName" placeholder="Last name" required />
+                    </div>
+                    <input type="email" name="email" placeholder="Email" required />
+                    <textarea placeholder="Message" required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </Layout>
     )
 }
