@@ -55,7 +55,7 @@ const Contact: NextPage = () => {
                 <p>Get in touch! We'd love to hear from you.</p>
 
                 <form onSubmit={sendMessage}>
-                    <div className="formGroup">
+                    <div className={s.formGroup}>
                         <input
                             type="text"
                             name="firstName"
@@ -88,16 +88,15 @@ const Contact: NextPage = () => {
                         placeholder="Message"
                         required
                     />
-                    { thanks &&
-                        <p>Thank you for your message! We will get back to you shortly.</p>
-                    }
-                    { error &&
-                        <p>Whoops - something went wrong, try again later!</p>
-                    }
-                    { !thanks &&
-                        <button type="submit">Submit</button>
-                    }
+                    <button type="submit">Submit</button>
                 </form>
+
+                { thanks &&
+                    <p>Thank you for your message! We will get back to you shortly.</p>
+                }
+                { error &&
+                    <p>Whoops - something went wrong, try again later!</p>
+                }
             </div>
         </Layout>
     )

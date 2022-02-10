@@ -1,7 +1,9 @@
-import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import s from '../styles/layout.module.scss'
+import { Dot } from 'react-bootstrap-icons'
+import SignUp from './SignUp'
 
 
 type LayoutProps = {
@@ -11,116 +13,85 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
     const router = useRouter();
 
-
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [thanks, setThanks] = useState(false)
-    const [error, setError] = useState(false)
-
-    const signUp = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
-
-        if(!firstName || !lastName || !email) return
-
-        const res = await fetch('/api/register', {
-            body: JSON.stringify({
-                firstName: firstName,
-                lastName: lastName,
-                email: email
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method: 'POST'
-        })
-
-        if(res.status === 200) {
-            setThanks(true)
-            setFirstName("")
-            setLastName("")
-            setEmail("")
-        }
-        else {
-            setError(true)
-        }
-    }
-
-
     return (
         <div className={s.container}>
             <header>
-                <Link href="/">
-                    <a className={router.pathname === "/" ? "active" : ""}>
-                        <h1>UB-OK</h1>
-                    </a>
-                </Link>
-                
+                <div className={s.title}>
+                    <Link href="/">
+                        <a className={router.pathname === "/" ? s.active : ""}>
+                            <h1>UB-OK</h1>
+                        </a>
+                    </Link>
+                </div>
+
                 <nav>
                     <Link href="/">
-                        <a className={router.pathname === "/" ? "active" : ""}>
+                        <a className={router.pathname === "/" ? s.active : ""}>
                             Home
+                            <Dot />
                         </a>
                     </Link>
                     <Link href="/about">
-                        <a className={router.pathname === "/about" ? "active" : ""}>
+                        <a className={router.pathname === "/about" ? s.active : ""}>
                             About
+                            <Dot />
                         </a>
                     </Link>
                     <Link href="/contact">
-                        <a className={router.pathname === "/contact" ? "active" : ""}>
-                            Contact us
+                        <a className={router.pathname === "/contact" ? s.active : ""}>
+                            Contact
+                            <Dot />
                         </a>
                     </Link>
                 </nav>
-
-                <aside>
-                    <span className={s.signUp}>Sign up now!</span>
-                    <span className={s.getAccess}><span className={s.manicule}>&#9758;</span> to get access to the <span className={s.preview}>free preview</span></span>
-                    
-                    <form onSubmit={signUp}>
-                        <div className="formGroup">
-                            <input
-                                type="text"
-                                name="firstName"
-                                value={firstName}
-                                onChange={e => setFirstName(e.currentTarget.value)}
-                                placeholder="First name"
-                                required
-                            />
-                            <input
-                                type="text"
-                                name="lastName"
-                                value={lastName}
-                                onChange={e => setLastName(e.currentTarget.value)}
-                                placeholder="Last name"
-                                required
-                            />
-                        </div>
-                        <input
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={e => setEmail(e.currentTarget.value)}
-                            placeholder="Email"
-                            required
-                        />
-                        { thanks &&
-                            <p>Thanks for signing up! You will receive an invitation shortly.</p>
-                        }
-                        { error &&
-                            <p>Whoops - something went wrong, try again later!</p>
-                        }
-                        { !thanks &&
-                            <button type="submit">Sign up</button>
-                        }
-                    </form>
-                </aside>
             </header>
 
             <main>
                 {children}
             </main>
+
+            <footer>
+                <p className={s.signUp}>
+                    Sign up for the free preview!
+                </p>
+                <SignUp />
+
+                <hr />
+
+                <div className={s.logoContainer}>
+                    <div className={s.logo}>
+                        <Image
+                            src="/images/nhs.png"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="The logo of NHS Scotland"
+                            priority
+                        />
+                    </div>
+                    <div className={s.logo}>
+                        <Image
+                            src="/images/sbri.png"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="The logo of SBRI Healthcare"
+                            priority
+                        />
+                    </div>
+                    <div className={s.logo}>
+                        <Image
+                            src="/images/uoe.png"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="The logo of the University of Edinburgh"
+                            priority
+                        />
+                    </div>
+                </div>
+
+                <p className={s.copy}>
+                    &copy; Voxsio { new Date().getFullYear() }
+                </p>
+            </footer>
         </div>
     )
 }

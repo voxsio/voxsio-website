@@ -1,40 +1,126 @@
 @import 'vars.module';
 
+.preamble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    .tag {
+        padding: 0 2rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: $blue;
+    }
+
+    .ctaContainer {
+        height: 43.5px;
+        margin-bottom: 2rem;
+    }
+
+    .cta {
+        height: 100%;
+        font-size: 0.9rem;
+    }
+
+    .chevron {
+        color: $blue;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
 .homeContainer {
-    height: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $lightD;
-    border-top-left-radius: 4rem;
-    border-bottom-left-radius: 4rem;
+    border-radius: 4rem;
+    margin-bottom: 4rem;
+
+    @media screen and (min-width: 1024px) {
+        height: 100vh;
+        width: calc(100vw - 375px);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow-y: auto;
+        flex-direction: row;
+        padding-left: 2rem;
+    }
 }
 
 .screenshotContainer {
     position: relative;
-    height: 100%;
+    width: 100%;
     aspect-ratio: 14/27;
+
+    @media screen and (min-width: 768px) {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        position: sticky;
+        top: 25vh;
+        height: 50vh;
+        width: initial;
+        margin: 25vh 0;
+    }
+
+    @media screen and (min-width: 1500px) {
+        top: 2.5vh;
+        height: 95vh;
+        margin: 2.5vh 0;
+    }
 }
 
 .contentContainer {
-    height: 100%;
-    padding: 20rem 5rem 5rem;
-    overflow-x: auto;
+    padding: 2rem;
 
-    section {
-        margin-bottom: 20rem;
+    @media screen and (min-width: 1024px) {
+        padding: 30vh 5rem;
+        max-width: 900px;
+    }
+
+    .largeTag {
+        display: none;
+        margin-bottom: 15rem;
+        font-family: 'Syne', sans-serif;
+        font-weight: bold;
+        font-size: 3rem;
+        color: $yellowD;
+        text-shadow: 1px 1px 0 $blue;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    section:not(:last-of-type) {
+        margin-bottom: 5rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 30vh;
+        }
     }
 
     h2 {
         margin-bottom: 0;
         font-family: 'Syne', sans-serif;
-        color: $yellowD;
-        text-shadow: 2px 1px $night;
+        font-weight: normal;
+        font-size: 2rem;
+        color: $blue;
     }
 
     p {
         margin-top: 0.5rem;
-        font-size: 1.1rem;
     }
 
     ul {
@@ -44,5 +130,11 @@
     li {
         margin-bottom: 0.5rem;
         font-size: 1.1rem;
+    }
+
+    .blankspace {
+        @media screen and (min-width: 1024px) {
+            height: 50vh;
+        }
     }
 }

@@ -1,3 +1,37 @@
+@import 'vars.module';
+
 .about {
-    padding: 5rem 20rem 0 10rem;
+    padding: 5rem 2rem;
+    background-color: $lightD;
+    border-radius: 4rem;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 100vh;
+        width: calc(100vw - 375px);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding-top: 7.5rem;
+        padding-bottom: 0;
+        overflow-y: auto;
+    }
+
+    p {
+        max-width: 550px;
+        margin: 0 auto 1rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 4rem;
+            margin-right: 0;
+        }
+    }
+
+    b {
+        font-family: 'Aclonica', sans-serif;
+    }
 }

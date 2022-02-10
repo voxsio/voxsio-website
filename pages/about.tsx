@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../components/Layout'
 import s from '../styles/about.module.scss'
 
@@ -15,15 +16,19 @@ const About: NextPage = () => {
 
             <div className={s.about}>
                 <p>
-                    <b>UB-OK</b> is a digital mental health start-up based in Edinburgh, Scotland
+                    <b>UB-OK</b> is a digital mental health start-up based in Edinburgh, Scotland.
                 </p>
 
                 <p>
-                    For the past few years, we have been developing intelligent conversational technology towards improving mental health
+                    We are developing intelligent conversational technology for improving mental health.
                 </p>
 
                 <p>
-                    Our team have backgrounds in couselling, business, technology, psychology and design
+                    Our team have backgrounds in couselling, business, technology, psychology and design.
+                </p>
+
+                <p>
+                    We're a tiny team and this part of the website is still under construction. Check back later or <Link href="/contact"><a>contact us</a></Link> for more information!
                 </p>
             </div>
         </Layout>

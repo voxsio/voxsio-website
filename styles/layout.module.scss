@@ -2,20 +2,44 @@
 
 .container {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
     width: 100%;
 
-    header {
-        position: fixed;
-        width: 440px;
+    @media screen and (min-width: 1024px) {
         height: 100vh;
-        padding: 2rem 3rem;
-        z-index: 100;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+            height: 100vh;
+            width: 375px;
+            padding-left: 2.5rem;
+            align-items: flex-start;
+        }
+    }
+
+    .title {
+        margin: 2rem auto 1rem;
+
+        a:hover {
+            border-bottom: none;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 0;
+        }
     }
 
     h1 {
+        margin: 0;
         font-family: 'Aclonica', sans-serif;
         font-size: 4rem;
         color: $red;
@@ -30,67 +54,111 @@
             text-shadow: none;
         }
     }
-
+    
     nav {
+        width: 100%;
+        max-width: 800px;
         display: flex;
-        flex-direction: column;
-        padding-left: 2rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         a {
-            width: fit-content;
-            margin-bottom: 1rem;
-        }
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $yellowD;
+            text-transform: uppercase;
+            font-weight: 900;
+            transition: $transition;
 
-    aside {
-        position: absolute;
-        bottom: 5rem;
-        width: 340px;
-        height: 200px;
-        border: 2px solid $night;
-        border-radius: 0.5rem;
-        padding: 1rem;
+            &:hover {
+                border-bottom: none;
+                color: $red;
+            }
 
-        .signUp {
-            position: absolute;
-            top: -1rem;
-            left: -0.5rem;
-            padding-right: 0.25rem;
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: $night;
-            background-color: $light;
-        }
-
-        .getAccess {
-            color: black;
-
-            .manicule {
+            svg {
+                visibility: hidden;
                 font-size: 1.5rem;
-                line-height: 0.5;
-                position: relative;
-                top: 3px;
+                color: $red;
+                margin-top: -0.5rem;
             }
 
-            .preview {
-                font-weight: 900;
+            &.active {
+                color: $red;
+
+                svg {
+                    visibility: visible;
+                }
             }
-        }
 
-        form {
-            width: 100%;
-            margin-top: 1rem;
+            @media screen and (min-width: 1024px) {
+                height: 1.5rem;
+                margin-bottom: 1rem;
+                flex-direction: row-reverse;
 
-            p {
-                margin-top: 0.5rem;
+                &.active svg {
+                    margin-top: 0;
+                }
             }
         }
     }
 
     main {
         position: relative;
+    }
+
+    footer {
         width: 100%;
-        padding: 5rem 0 5rem 440px;
+        margin: 5rem 0 2rem;
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            width: initial;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            padding-left: 0.5rem;
+        }
+
+        p {
+            padding: 0 2rem;
+        }
+
+        .signUp {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            color: $blueD;
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            width: 80%;
+            margin-bottom: 3rem;
+            border-color: $gray1;
+        }
+
+        .logoContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .logo {
+                position: relative;
+                width: 20%;
+                aspect-ratio: 1;
+            }
+        }
+
+        .copy {
+            padding-top: 2rem;
+            color: $gray4;
+        }
     }
 }
