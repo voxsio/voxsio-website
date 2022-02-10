@@ -89,7 +89,7 @@ const Layout = ({ children }: LayoutProps) => {
                 </div>
 
                 <p className={s.copy}>
-                    &copy; Voxsio { new Date().getFullYear() }
+                    &copy; Voxsio { new Date().getFullYear() }. <Link href="/privacy"><a>Privacy policy</a></Link>
                 </p>
             </footer>
         </div>
