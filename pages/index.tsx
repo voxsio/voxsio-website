@@ -22,7 +22,7 @@ const Home: NextPage = () => {
                 </p>
 
                 <p className={s.tag}>
-                    Sign up for the free preview now.
+                    Try the free preview now!
                 </p>
 
                 <SignUp />
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                     <section>
                         <h2>Meet UB-OK!</h2>
                         <p>
-                            UB-OK is a friendly bot who <b>helps you try out daily activities</b> that can help improve your mental health.
+                            UB-OK is a friendly app that <b>helps you try out daily activities</b> that can help improve your mental health.
                             <br /><br />
                             Help us <b>change the way</b> people manage their health and wellbeing, by trying UB-OK and giving feedback!
                         </p>
@@ -73,14 +73,13 @@ const Home: NextPage = () => {
                             <li>UB-OK uses <b>evidence-based</b> psychological approaches to improve wellbeing</li>
                             <li>We use <b>engaging and effective</b> modern conversational technology to tailor the content to be relevant to you</li>
                             <li>UB-OK is being developed in partnership with <b>NHS Scotland and young people</b></li>
-                            <li>Sign up for the preview and <b>give feedback</b> to help improve the bot!</li>
+                            <li>Sign up for the preview and <b>give feedback</b> to help improve the app!</li>
                         </ul>
                     </section>
 
                     <div className={s.blankspace} />
                 </div>
             </div>
-
         </Layout>
     )
 }

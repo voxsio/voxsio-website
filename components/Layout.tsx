@@ -52,7 +52,7 @@ const Layout = ({ children }: LayoutProps) => {
 
             <footer>
                 <p className={s.signUp}>
-                    Sign up for the free preview!
+                    Try the free preview!
                 </p>
                 <SignUp />
 
