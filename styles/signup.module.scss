@@ -19,12 +19,11 @@
     }
 
     .btnContainer {
+        flex-shrink: 0;
         height: 100%;
     }
 
     button {
-        flex-shrink: 0;
-        height: 100%;
         font-size: 0.9rem;
     }
 
