@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const nodemailer = require("nodemailer")
 
     const transporter = nodemailer.createTransport({
@@ -21,10 +21,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         text: `Hi there,\n\n${req.body.email} has requested access to the app via the form on the website.\n\nCheers,\nThe Website\n`
     }
 
-    transporter.sendMail(mailData, (err: any, info: any) => {
-        if(err) console.log(err)
-        else console.log(info)
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, (err: any, info: any) => {
+            if(err) {
+                console.log(err)
+                reject(err)
+                res.status(501).end()
+            }
+            else {
+                console.log(info)
+                resolve(info)
+                res.status(200).end()
+            }
+        })
     })
-
-    res.status(200).end()
 }
