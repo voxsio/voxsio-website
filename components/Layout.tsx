@@ -19,7 +19,13 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className={s.title}>
                     <Link href="/">
                         <a className={router.pathname === "/" ? s.active : ""}>
-                            <h1>UB-OK</h1>
+                            <Image
+                                src="/images/logo.png"
+                                layout="fill"
+                                objectFit="contain"
+                                alt="The UB-OK logo, with the four letters in different colours"
+                                priority
+                            />
                         </a>
                     </Link>
                 </div>
