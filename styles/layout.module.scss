@@ -156,9 +156,32 @@
             }
         }
 
+        .social {
+            padding: 2rem 2rem 1rem;
+
+            a {
+                &:hover {
+                    border-bottom: none;
+                    filter: brightness(0.5);
+                }
+
+                & ~ a {
+                    margin-left: 2rem;
+                }
+            }
+
+            svg {
+                font-size: 1.75rem;
+                //filter: drop-shadow(1px 1px 0 $gray4);
+            }
+
+            .insta {
+                color: $roseD;
+            }
+        }
+
         .copy {
             font-size: 0.9rem;
-            padding-top: 2rem;
             color: $gray4;
         }
     }

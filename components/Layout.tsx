@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import s from '../styles/layout.module.scss'
-import { Dot } from 'react-bootstrap-icons'
+import { Dot, Instagram, Twitter } from 'react-bootstrap-icons'
 import SignUp from './SignUp'
 
 
@@ -86,6 +86,15 @@ const Layout = ({ children }: LayoutProps) => {
                             priority
                         />
                     </div>
+                </div>
+
+                <div className={s.social}>
+                    <a href="https://twitter.com/ubok_app" className={s.twitter} target="_blank" rel="noopener noreferrer">
+                        <Twitter />
+                    </a>
+                    <a href="https://www.instagram.com/ubok_app/" className={s.insta} target="_blank" rel="noopener noreferrer">
+                        <Instagram />
+                    </a>
                 </div>
 
                 <p className={s.copy}>
