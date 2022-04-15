@@ -4,56 +4,37 @@
     position: relative;
     width: 100%;
 
-    @media screen and (min-width: 1024px) {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-    }
-
     header {
+        height: 7rem;
         position: relative;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        margin-bottom: 1.5rem;
-
-        @media screen and (min-width: 1024px) {
-            height: 100vh;
-            width: 375px;
-            padding-left: 2.5rem;
-            align-items: flex-start;
-        }
     }
 
     .title {
         position: relative;
-        height: 120px;
-        width: 100%;
-        margin: 2rem auto 2rem;
+        height: 4rem;
+        width: 17.5rem;
+        //aspect-ratio: 1024 / 321;
+        margin-left: 3rem;
 
         a:hover {
             border-bottom: none;
             opacity: 0.8;
         }
 
-        @media screen and (min-width: 1024px) {
-            width: calc(100% - 2rem);
-            margin: 1rem 2rem 1rem 0;
+        a:active {
+            opacity: 0.7;
         }
     }
     
     nav {
         width: 100%;
-        max-width: 800px;
+        max-width: 600px;
+        margin-left: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-
-        @media screen and (min-width: 1024px) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
 
         a {
             display: flex;
@@ -70,7 +51,7 @@
             }
 
             svg {
-                visibility: hidden;
+                display: none;
                 font-size: 1.5rem;
                 color: $red;
                 margin-top: -0.5rem;
@@ -80,17 +61,7 @@
                 color: $red;
 
                 svg {
-                    visibility: visible;
-                }
-            }
-
-            @media screen and (min-width: 1024px) {
-                height: 1.5rem;
-                margin-bottom: 1rem;
-                flex-direction: row-reverse;
-
-                &.active svg {
-                    margin-top: 0;
+                    display: block;
                 }
             }
         }
@@ -105,15 +76,6 @@
         margin: 5rem 0 2rem;
         text-align: center;
 
-        @media screen and (min-width: 1024px) {
-            width: 375px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            text-align: left;
-            padding-left: 0.5rem;
-        }
-
         p {
             padding: 0 2rem;
         }
@@ -125,6 +87,11 @@
             margin-bottom: 1rem;
         }
 
+        .signUpContainer {
+            width: 100%;
+            padding: 0 2rem;
+        }
+
         hr {
             width: 80%;
             margin-bottom: 3rem;
@@ -133,9 +100,11 @@
 
         .logoContainer {
             width: 100%;
+            max-width: 500px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            margin: 0 auto;
 
             .logo {
                 position: relative;

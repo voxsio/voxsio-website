@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import s from '../styles/about.module.scss'
@@ -15,6 +16,17 @@ const About: NextPage = () => {
             </Head>
 
             <div className={s.about}>
+                <figure>
+                    <div>
+                        <Image
+                            src="/images/team.png"
+                            layout="fill"
+                            alt="The UB-OK team sitting on a couch"
+                        />
+                    </div>
+                    <figcaption>From left to right: Juvia Tian, digital artist; Rayo Verweij, technical lead; Cameron Macalister, research assistant; and Michael McTernan, CEO.</figcaption>
+                </figure>
+
                 <p>
                     <b>UB-OK</b> is a digital mental health start-up based in Edinburgh, Scotland.
                 </p>

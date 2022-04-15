@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const mailData = {
         from: 'ubok.website.notifier@gmail.com',
-        to: 'cameron.macalister@voxsio.com',
+        to: 'michael.mcternan@voxsio.com',
         subject: `Contact form filled out: ${req.body.firstName} ${req.body.lastName}`,
         text: `Hi there,\n\n${req.body.firstName} ${req.body.lastName} at ${req.body.email} has used the contact form on the website to send the following message:\n\n${req.body.body}\n\nCheers,\nThe Website\n`
     }

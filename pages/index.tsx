@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Layout from '../components/Layout'
 import SignUp from '../components/SignUp'
 import s from '../styles/home.module.scss'
-import { ChevronDown } from 'react-bootstrap-icons'
+import { Book, ChevronDown, GraphUpArrow, Puzzle, ShieldShaded } from 'react-bootstrap-icons'
 
 
 const Home: NextPage = () => {
@@ -25,7 +25,9 @@ const Home: NextPage = () => {
                     Try the free preview now!
                 </p>
 
-                <SignUp />
+                <div className={s.signUpContainer}>
+                    <SignUp />
+                </div>
                 
                 <div className={s.chevron}>
                     <ChevronDown />
@@ -44,9 +46,15 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className={s.contentContainer}>
-                    <p className={s.largeTag}>
-                        Improve your mental health, one conversation a day.
-                    </p>
+                    <div className={s.largeTag}>
+                        <h1>
+                            Improve your mental health, <span>one conversation a day.</span>
+                        </h1>
+                        <p>
+                            <b>Try the free preview now.</b>
+                        </p>
+                        <SignUp />
+                    </div>
 
                     <section>
                         <h2>Meet UB-OK!</h2>
@@ -59,22 +67,24 @@ const Home: NextPage = () => {
 
                     <section>
                         <h2>What is UB-OK?</h2>
-                        <ul>
-                            <li>A <b>safe space</b> to talk about and understand your health and wellbeing</li>
-                            <li><b>Practical activities</b> using evidence-based techniques</li>
-                            <li>A <b>library of resources</b> to help you make sense of how you feel and develop skills to manage it</li>
-                            <li><b>Track and monitor</b> how you are doing, what's working, and what isn't </li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>How does UB-OK work?</h2>
-                        <ul>
-                            <li>UB-OK uses <b>evidence-based</b> psychological approaches to improve wellbeing</li>
-                            <li>We use <b>engaging and effective</b> modern conversational technology to tailor the content to be relevant to you</li>
-                            <li>UB-OK is being developed in partnership with <b>NHS Scotland and young people</b></li>
-                            <li>Sign up for the preview and <b>give feedback</b> to help improve the app!</li>
-                        </ul>
+                        <div className={s.featureGrid}>
+                            <div>
+                                <ShieldShaded />
+                                A <b>safe space</b> to talk about and understand your health and wellbeing
+                            </div>
+                            <div>
+                                <Puzzle />
+                                <b>Practical daily activities</b> using evidence-based psychological approaches
+                            </div>
+                            <div>
+                                <Book />
+                                A <b>library of resources</b> developed in partnership with NHS Scotland and young people
+                            </div>
+                            <div>
+                                <GraphUpArrow />
+                                <b>Track and monitor</b> how you are doing, what's working, and what isn't
+                            </div>
+                        </div>
                     </section>
 
                     <div className={s.blankspace} />

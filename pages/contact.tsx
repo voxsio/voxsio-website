@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Layout from '../components/Layout'
 import s from '../styles/contact.module.scss'
 
@@ -89,14 +90,30 @@ const Contact: NextPage = () => {
                         required
                     />
                     <button type="submit">Submit</button>
+                    
+                    { thanks &&
+                        <p>Thank you for your message! We will get back to you shortly.</p>
+                    }
+                    { error &&
+                        <p>Whoops - something went wrong. Try again later or email us at <a href="mailto:chat@voxsio.com" rel="noopener noreferrer" target="_blank">chat@voxsio.com</a>.</p>
+                    }
                 </form>
 
-                { thanks &&
-                    <p>Thank you for your message! We will get back to you shortly.</p>
-                }
-                { error &&
-                    <p>Whoops - something went wrong, try again later!</p>
-                }
+
+                <p>Alternatively, come say hi in person! We are based in the Bayes Centre at the University of Edinburgh and we are always open for visitors.</p>
+                <div className={s.bayes}>
+                    <Image
+                        src="/images/bayes.png"
+                        layout="fill"
+                        alt="The Bayes Centre wordmark"
+                    />
+                </div>
+                <address>
+                    <b>Bayes Centre</b><br />
+                    Office 4.35<br />
+                    47 Potterrow<br />
+                    Edinburgh EH8 9BT
+                </address>
             </div>
         </Layout>
     )

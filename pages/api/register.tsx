@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const mailData = {
         from: 'ubok.website.notifier@gmail.com',
-        to: 'cameron.macalister@voxsio.com',
+        to: 'michael.mcternan@voxsio.com',
         subject: `Website demo request`,
         text: `Hi there,\n\n${req.body.email} has requested access to the app via the form on the website.\n\nCheers,\nThe Website\n`
     }

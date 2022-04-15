@@ -5,30 +5,9 @@
     background-color: $lightD;
     border-radius: 4rem;
 
-    @media screen and (min-width: 768px) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
-    @media screen and (min-width: 1024px) {
-        height: 100vh;
-        width: calc(100vw - 375px);
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        padding-top: 7.5rem;
-        padding-bottom: 0;
-        overflow-y: auto;
-    }
-
     p {
-        width: fit-content;
+        max-width: 500px;
         margin: 0 auto 1rem;
-
-        @media screen and (min-width: 1024px) {
-            margin-left: 4rem;
-            margin-right: 0;
-        }
     }
 
     form {
@@ -36,11 +15,6 @@
         flex-direction: column;
         max-width: 500px;
         margin: 0 auto 2rem;
-
-        @media screen and (min-width: 1024px) {
-            margin-left: 4rem;
-            margin-right: 0;
-        }
 
         .formGroup {
             width: 100%;
@@ -57,11 +31,33 @@
         input, textarea {
             margin-bottom: 1rem;
         }
+        
+        textarea {
+            min-height: 300px;
+        }
 
         button {
             width: fit-content;
             font-size: 0.9rem;
             align-self: flex-end;
         }
+
+        p {
+            margin: 1rem 0;
+        }
+    }
+
+    .bayes {
+        position: relative;
+        width: 200px;
+        aspect-ratio: 125 / 27;
+        margin-top: 2rem;
+        margin-left: calc(50% - 250px);
+    }
+
+    address {
+        font-style: normal;
+        max-width: 500px;
+        margin: 0 auto 1rem;
     }
 }

@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
             <header>
                 <div className={s.title}>
                     <Link href="/">
-                        <a className={router.pathname === "/" ? s.active : ""}>
+                        <a>
                             <Image
                                 src="/images/logo.png"
                                 layout="fill"
@@ -60,7 +60,9 @@ const Layout = ({ children }: LayoutProps) => {
                 <p className={s.signUp}>
                     Try the free preview!
                 </p>
-                <SignUp />
+                <div className={s.signUpContainer}>
+                    <SignUp />
+                </div>
 
                 <hr />
 
