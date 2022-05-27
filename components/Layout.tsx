@@ -57,14 +57,14 @@ const Layout = ({ children }: LayoutProps) => {
             </main>
 
             <footer>
-                <p className={s.signUp}>
+                {/* <p className={s.signUp}>
                     Try the free preview!
                 </p>
                 <div className={s.signUpContainer}>
                     <SignUp />
                 </div>
 
-                <hr />
+                <hr /> */}
 
                 <div className={s.logoContainer}>
                     <div className={s.logo}>

@@ -53,9 +53,9 @@ const Contact: NextPage = () => {
             </Head>
 
             <div className={s.container}>
-                <p>Get in touch! We'd love to hear from you.</p>
+                <p>Get in touch! We'd love to hear from you at <a href="mailto:chat@voxsio.com">chat@voxsio.com</a>.</p>
 
-                <form onSubmit={sendMessage}>
+                {/* <form onSubmit={sendMessage}>
                     <div className={s.formGroup}>
                         <input
                             type="text"
@@ -97,7 +97,7 @@ const Contact: NextPage = () => {
                     { error &&
                         <p>Whoops - something went wrong. Try again later or email us at <a href="mailto:chat@voxsio.com" rel="noopener noreferrer" target="_blank">chat@voxsio.com</a>.</p>
                     }
-                </form>
+                </form> */}
 
 
                 <p>Alternatively, come say hi in person! We are based in the Bayes Centre at the University of Edinburgh and we are always open for visitors.</p>

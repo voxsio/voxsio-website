@@ -21,13 +21,13 @@ const Home: NextPage = () => {
                     Improve&nbsp;your&nbsp;mental&nbsp;health, <wbr />one&nbsp;conversation&nbsp;a&nbsp;day.
                 </p>
 
-                <p className={s.tag}>
+                {/* <p className={s.tag}>
                     Try the free preview now!
                 </p>
 
                 <div className={s.signUpContainer}>
                     <SignUp />
-                </div>
+                </div> */}
                 
                 <div className={s.chevron}>
                     <ChevronDown />
@@ -50,10 +50,10 @@ const Home: NextPage = () => {
                         <h1>
                             Improve your mental health, <span>one conversation a day.</span>
                         </h1>
-                        <p>
+                        {/* <p>
                             <b>Try the free preview now.</b>
                         </p>
-                        <SignUp />
+                        <SignUp /> */}
                     </div>
 
                     <section>
