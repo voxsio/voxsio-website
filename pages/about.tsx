@@ -32,7 +32,7 @@ const About: NextPage = () => {
                 </p>
 
                 <p>
-                    We are developing intelligent conversational technology for improving mental health.
+                    We make clinicians' mental health expertise accessible, engaging, and scalable by creating digital prescriptions of automated therapeutic conversations.
                 </p>
 
                 <p>
