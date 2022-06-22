@@ -21,7 +21,7 @@ const About: NextPage = () => {
                         <Image
                             src="/images/team.jpg"
                             layout="fill"
-                            alt="The UB-OK team sitting on a couch"
+                            alt="The UB-OK team posing in front of a window of the Bayes Centre"
                         />
                     </div>
                     <figcaption>From left to right: Michael McTernan, CEO; Juvia Tian, digital artist; Rayo Verweij, technical lead; and Clarissa Yung, research assistant.</figcaption>
