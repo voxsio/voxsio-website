@@ -19,12 +19,12 @@ const About: NextPage = () => {
                 <figure>
                     <div>
                         <Image
-                            src="/images/team.png"
+                            src="/images/team.jpg"
                             layout="fill"
                             alt="The UB-OK team sitting on a couch"
                         />
                     </div>
-                    <figcaption>From left to right: Juvia Tian, digital artist; Rayo Verweij, technical lead; Cameron Macalister, research assistant; and Michael McTernan, CEO.</figcaption>
+                    <figcaption>From left to right: Michael McTernan, CEO; Juvia Tian, digital artist; Rayo Verweij, technical lead; and Clarissa Yung, research assistant.</figcaption>
                 </figure>
 
                 <p>
