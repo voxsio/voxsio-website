@@ -53,7 +53,7 @@ const Contact: NextPage = () => {
             </Head>
 
             <div className={s.container}>
-                <p>Get in touch! We'd love to hear from you at <a href="mailto:chat@voxsio.com">chat@voxsio.com</a>.</p>
+                <p>Get in touch! We'd love to hear from you at <a href="mailto:chat@ubok.app">chat@ubok.app</a>.</p>
 
                 {/* <form onSubmit={sendMessage}>
                     <div className={s.formGroup}>

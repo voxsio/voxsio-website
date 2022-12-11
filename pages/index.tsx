@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/Layout'
-import SignUp from '../components/SignUp'
 import s from '../styles/home.module.scss'
 import { Book, ChevronDown, GraphUpArrow, Puzzle, ShieldShaded } from 'react-bootstrap-icons'
 
@@ -50,10 +49,9 @@ const Home: NextPage = () => {
                         <h1>
                             Improve your mental health, <span>one conversation a day.</span>
                         </h1>
-                        {/* <p>
-                            <b>Try the free preview now.</b>
+                        <p>
+                            <b>Public preview coming soon!</b>
                         </p>
-                        <SignUp /> */}
                     </div>
 
                     <section>
@@ -74,7 +72,7 @@ const Home: NextPage = () => {
                             </div>
                             <div>
                                 <Puzzle />
-                                <b>Practical daily activities</b> using evidence-based psychological approaches
+                                Programmes of <b>practical activities</b> using evidence-based psychological approaches
                             </div>
                             <div>
                                 <Book />
