@@ -103,6 +103,22 @@
         }
     }
 
+    .storeBtnLink {
+        &:hover {
+            border-bottom: none;
+        }
+    }
+
+    .storeBtnGoogle {
+        height: 100px;
+    }
+
+    .storeBtnApple {
+        height: 70px;
+        position: relative;
+        top: -15px;
+    }
+
     .featureGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

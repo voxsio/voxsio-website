@@ -50,8 +50,30 @@ const Home: NextPage = () => {
                             Improve your mental health, <span>one conversation a day.</span>
                         </h1>
                         <p>
-                            <b>Public preview coming soon!</b>
+                            <b>Join the public preview now:</b><br />
                         </p>
+                        <div>
+                            <a
+                                href='https://testflight.apple.com/join/pAsYu0rE'
+                                className={s.storeBtnLink}
+                            >
+                                <img
+                                    alt='Download on the App Store'
+                                    src='/images/downloadAppStore.svg'
+                                    className={s.storeBtnApple}
+                                />
+                            </a>
+                            <a
+                                href='https://play.google.com/store/apps/details?id=com.ubok.ubok&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                className={s.storeBtnLink}
+                            >
+                                <img
+                                    alt='Get it on Google Play'
+                                    src='https://play.google.com/intl/en_gb/badges/static/images/badges/en_badge_web_generic.png'
+                                    className={s.storeBtnGoogle}
+                                />
+                            </a>
+                        </div>
                     </div>
 
                     <section>
