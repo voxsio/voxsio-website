@@ -1,119 +1,91 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-import s from '../styles/layout.module.scss'
-import { Dot, Instagram, Twitter, Linkedin } from 'react-bootstrap-icons'
-import SignUp from './SignUp'
+import { ReactNode } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Dot, Icon, Instagram, Twitter, Linkedin } from 'react-bootstrap-icons';
 
 
 type LayoutProps = {
-    children: React.ReactNode
-}
+	children: ReactNode;
+};
 
 const Layout = ({ children }: LayoutProps) => {
-    const router = useRouter();
+	const router = useRouter();
 
-    return (
-        <div className={s.container}>
-            <header>
-                <div className={s.title}>
-                    <Link href="/">
-                        <a>
-                            <Image
-                                src="/images/logo.png"
-                                layout="fill"
-                                objectFit="contain"
-                                alt="The UB-OK logo, with the four letters in different colours"
-                                priority
-                            />
-                        </a>
-                    </Link>
-                </div>
+	return (
+		<div className="relative w-full">
+			<header className="relative h-28 flex items-center">
+				<div className="relative h-16 w-[17.5rem] ml-12">
+					<Link href="/">
+						<Image
+							src="/images/logo.png"
+							alt="The UB-OK logo, with the four letters in different colours"
+							fill
+							className="object-contain hover:opacity-80 active:opacity-70"
+							priority
+						/>
+					</Link>
+				</div>
 
-                <nav>
-                    <Link href="/">
-                        <a className={router.pathname === "/" ? s.active : ""}>
-                            Home
-                            <Dot />
-                        </a>
-                    </Link>
-                    <Link href="/about">
-                        <a className={router.pathname === "/about" ? s.active : ""}>
-                            About
-                            <Dot />
-                        </a>
-                    </Link>
-                    <Link href="/contact">
-                        <a className={router.pathname === "/contact" ? s.active : ""}>
-                            Contact
-                            <Dot />
-                        </a>
-                    </Link>
-                </nav>
-            </header>
+				<nav className="w-full max-w-[600px] ml-auto flex justify-evenly">
+					{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
+						<Link
+							href={link}
+							className={`flex flex-col items-center uppercase font-black ${router.pathname === link ? "" : ""}`}
+						>
+							{title}
+							<Dot />
+						</Link>
+					))}
+				</nav>
+			</header>
 
-            <main>
-                {children}
-            </main>
+			<main className="relative">
+				{children}
+			</main>
 
-            <footer>
-                {/* <p className={s.signUp}>
-                    Try the free preview!
-                </p>
-                <div className={s.signUpContainer}>
-                    <SignUp />
-                </div>
+			<footer className="w-full mt-20 mb-8">
+				<div className="w-full max-w-[500px] flex flex-row justify-evenly mx-auto">
+					{[
+						["nhs", "The logo of NHS Scotland"],
+						["sbri", "The logo of SBRI Healthcare"],
+						["uoe", "The logo of the University of Edinburgh"]
+					].map(([name, alt]) => (
+						<div className="relative w-[20%] aspect-square">
+							<Image
+								src={`/images/${name}.png`}
+								fill
+								alt={alt}
+								className="object-contain"
+								priority
+							/>
+						</div>
+					))}
+				</div>
 
-                <hr /> */}
+				<div className="pt-8 px-8 pb-4">
+					{([
+						["https://twitter.com/ubok_app", Twitter, ""],
+						["https://www.instagram.com/ubok_app/", Instagram, ""],
+						["https://linkedin.com/company/ubok", Linkedin, ""]
+					] as [string, Icon, string][]).map(([link, Icon, className]) => (
+						<a
+							href={link}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={className}
+						>
+							<Icon />
+						</a>
+					))}
+				</div>
 
-                <div className={s.logoContainer}>
-                    <div className={s.logo}>
-                        <Image
-                            src="/images/nhs.png"
-                            layout="fill"
-                            objectFit="contain"
-                            alt="The logo of NHS Scotland"
-                            priority
-                        />
-                    </div>
-                    <div className={s.logo}>
-                        <Image
-                            src="/images/sbri.png"
-                            layout="fill"
-                            objectFit="contain"
-                            alt="The logo of SBRI Healthcare"
-                            priority
-                        />
-                    </div>
-                    <div className={s.logo}>
-                        <Image
-                            src="/images/uoe.png"
-                            layout="fill"
-                            objectFit="contain"
-                            alt="The logo of the University of Edinburgh"
-                            priority
-                        />
-                    </div>
-                </div>
-
-                <div className={s.social}>
-                    <a href="https://twitter.com/ubok_app" target="_blank" rel="noopener noreferrer">
-                        <Twitter />
-                    </a>
-                    <a href="https://www.instagram.com/ubok_app/" className={s.insta} target="_blank" rel="noopener noreferrer">
-                        <Instagram />
-                    </a>
-                    <a href="https://linkedin.com/company/ubok" target="_blank" rel="noopener noreferrer">
-                        <Linkedin />
-                    </a>
-                </div>
-
-                <p className={s.copy}>
-                    &copy; Voxsio { new Date().getFullYear() }. <Link href="/privacy"><a>Privacy policy</a></Link>
-                </p>
-            </footer>
-        </div>
-    )
-}
+				<p className="px-8 text-sm">
+					&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
+				</p>
+			</footer>
+		</div>
+	);
+};
 
 export default Layout;
