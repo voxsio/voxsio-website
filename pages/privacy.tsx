@@ -40,22 +40,26 @@ const Privacy: NextPage = () => (
 				<h3>Why do I need to know what a Privacy Policy is?</h3>
 				<p>
 					We believe that it is important for you to understand how we:
-					<ol className="list-decimal ml-8 my-2">
-						<li>Protect your personal and confidential information</li>
-						<li>Take care to meet all legal and regulatory responsibilities</li>
-						<li>Make sure that you understand the legal framework protecting your data and the choices that you have about how your data is used</li>
-					</ol>
+				</p>
+				<ol className="list-decimal ml-8 my-2">
+					<li>Protect your personal and confidential information</li>
+					<li>Take care to meet all legal and regulatory responsibilities</li>
+					<li>Make sure that you understand the legal framework protecting your data and the choices that you have about how your data is used</li>
+				</ol>
+				<p>
 					This policy explains the choices that you can make about the way in which we use your information and how you have the right to change your mind at any time.
 				</p>
 
 				<h3>What information do we collect and hold about you?</h3>
 				<p>
 					Voxsio collect and process several different types of information:
-					<ol className="list-decimal ml-8 my-2">
-						<li>You set up a username on the app, which is held locally on your device and is not held by, known to, or processed by Voxsio</li>
-						<li>We collect the conversations that you have with the app, without information that identifies you, including the answers that you give, and use them to gain insight into how the app is being used</li>
-						<li>We collect aggregated statistical information about groups of individuals, and then combine this to show general trends</li>
-					</ol>
+				</p>
+				<ol className="list-decimal ml-8 my-2">
+					<li>You set up a username on the app, which is held locally on your device and is not held by, known to, or processed by Voxsio</li>
+					<li>We collect the conversations that you have with the app, without information that identifies you, including the answers that you give, and use them to gain insight into how the app is being used</li>
+					<li>We collect aggregated statistical information about groups of individuals, and then combine this to show general trends</li>
+				</ol>
+				<p>
 					When we need to use information about you we will only use the minimum amount of information necessary and never share any confidential information unless we have first gained your consent or if it is required in order to keep you or someone else safe.
 				</p>
 
@@ -67,13 +71,11 @@ const Privacy: NextPage = () => (
 
 				<h3>Legal Obligations</h3>
 				<p>In the circumstances where we are <u>required</u> to use personal identifiable information, we will only do this if:</p>
-				<p>
-					<ul className="list-disc ml-8">
-						<li>We have written consent from you to use your information for a specific purpose</li>
-						<li>In order to keep you or someone else safe</li>
-						<li>There is a legal requirement for us to use or provide information e.g. a formal court order or subpoena</li>
-					</ul>
-				</p>
+				<ul className="list-disc ml-8">
+					<li>We have written consent from you to use your information for a specific purpose</li>
+					<li>In order to keep you or someone else safe</li>
+					<li>There is a legal requirement for us to use or provide information e.g. a formal court order or subpoena</li>
+				</ul>
 
 				<h3>Your Rights</h3>
 				<p>You have certain legal rights, including a right to have your information processed fairly and lawfully and a right to access any identifiable information we hold about you.</p>
