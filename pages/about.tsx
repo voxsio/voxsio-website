@@ -11,7 +11,6 @@ const About: NextPage = () => {
             <Head>
                 <title>UB-OK - About</title>
                 <meta name="description" content="UB/OK" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className={s.about}>

@@ -49,7 +49,6 @@ const Contact: NextPage = () => {
             <Head>
                 <title>UB-OK - Contact us</title>
                 <meta name="description" content="UB/OK" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className={s.container}>

@@ -1,8 +1,6 @@
-@import 'vars.module';
-
 .container {
     padding: 5rem 2rem;
-    background-color: $lightD;
+    //background-color: $lightD;
     border-radius: 4rem;
 
     @media screen and (min-width: 768px) {
@@ -22,11 +20,11 @@
     }
 
     h1 {
-        color: $yellow;
+        //color: $yellow;
         font-size: 5rem;
 
         &:active {
-            text-shadow: 3px 1px $blue;
+            //text-shadow: 3px 1px $blue;
         }
     }
 

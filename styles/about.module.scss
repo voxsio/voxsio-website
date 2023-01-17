@@ -1,8 +1,6 @@
-@import 'vars.module';
-
 .about {
     padding: 5rem 2rem;
-    background-color: $lightD;
+    //background-color: $lightD;
     border-radius: 4rem;
 
     figure {
@@ -17,7 +15,7 @@
 
             img {
                 border-radius: 0.5rem;
-                border: 4px solid $blue !important;
+                //border: 4px solid $blue !important;
             }
         }
 

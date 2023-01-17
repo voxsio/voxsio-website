@@ -2,19 +2,20 @@ import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Dot, Icon, Instagram, Twitter, Linkedin } from 'react-bootstrap-icons';
+import { Icon, Instagram, Twitter, Linkedin } from 'react-bootstrap-icons';
 
 
 type LayoutProps = {
 	children: ReactNode;
+	headerStyle?: string;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, headerStyle }: LayoutProps) => {
 	const router = useRouter();
 
 	return (
 		<div className="relative w-full">
-			<header className="relative h-28 flex items-center">
+			<header className={`relative h-28 flex items-center ${headerStyle}`}>
 				<div className="relative h-16 w-[17.5rem] ml-12">
 					<Link href="/">
 						<Image
@@ -30,11 +31,11 @@ const Layout = ({ children }: LayoutProps) => {
 				<nav className="w-full max-w-[600px] ml-auto flex justify-evenly">
 					{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
 						<Link
+							key={link}
 							href={link}
 							className={`flex flex-col items-center uppercase font-black ${router.pathname === link ? "" : ""}`}
 						>
 							{title}
-							<Dot />
 						</Link>
 					))}
 				</nav>
@@ -44,14 +45,17 @@ const Layout = ({ children }: LayoutProps) => {
 				{children}
 			</main>
 
-			<footer className="w-full mt-20 mb-8">
+			<footer className="w-full mt-16 mb-8">
 				<div className="w-full max-w-[500px] flex flex-row justify-evenly mx-auto">
 					{[
 						["nhs", "The logo of NHS Scotland"],
 						["sbri", "The logo of SBRI Healthcare"],
 						["uoe", "The logo of the University of Edinburgh"]
 					].map(([name, alt]) => (
-						<div className="relative w-[20%] aspect-square">
+						<div
+							key={name}
+							className="relative w-[20%] aspect-square"
+						>
 							<Image
 								src={`/images/${name}.png`}
 								fill
@@ -63,24 +67,25 @@ const Layout = ({ children }: LayoutProps) => {
 					))}
 				</div>
 
-				<div className="pt-8 px-8 pb-4">
+				<div className="w-full mt-8 flex flex-row justify-center gap-8">
 					{([
-						["https://twitter.com/ubok_app", Twitter, ""],
-						["https://www.instagram.com/ubok_app/", Instagram, ""],
-						["https://linkedin.com/company/ubok", Linkedin, ""]
+						["https://twitter.com/ubok_app", Twitter, "text-aqua"],
+						["https://www.instagram.com/ubok_app/", Instagram, "text-pink"],
+						["https://linkedin.com/company/ubok", Linkedin, "text-ocean"]
 					] as [string, Icon, string][]).map(([link, Icon, className]) => (
 						<a
+							key={link}
 							href={link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className={className}
+							className={`hover:border-b-0 hover:opacity-80 ${className}`}
 						>
-							<Icon />
+							<Icon className="w-6 h-6" />
 						</a>
 					))}
 				</div>
 
-				<p className="px-8 text-sm">
+				<p className="mt-8 px-8 text-sm text-center">
 					&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
 				</p>
 			</footer>

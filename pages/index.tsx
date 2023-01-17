@@ -12,7 +12,6 @@ const Home: NextPage = () => {
             <Head>
                 <title>UB-OK - Home</title>
                 <meta name="description" content="UB/OK" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className={s.preamble}>
