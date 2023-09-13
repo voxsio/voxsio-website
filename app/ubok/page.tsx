@@ -1,7 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '../components/Layout';
 
 
 const stories = [
@@ -19,13 +16,8 @@ const stories = [
 ];
 
 
-const Home: NextPage = () => (
-	<Layout>
-		<Head>
-			<title>UB-OK - Home</title>
-			<meta name="description" content="UB-OK" />
-		</Head>
-
+const Page = () => (
+	<>
 		<section className="w-full h-[50vh] flex items-center justify-center border-y border-blue-500">
 			<div className="text-2xl">
 				<h1>Welcome to UBBBBBOK!</h1>
@@ -69,10 +61,10 @@ const Home: NextPage = () => (
 		<section className="w-full h-[50vh] bg-grass">
 			
 		</section>
-	</Layout>
+	</>
 );
 
-export default Home;
+export default Page;
 
 
 

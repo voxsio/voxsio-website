@@ -4,7 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	content: [
-		"./pages/**/*.{js,ts,jsx,tsx}",
+		"./app/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*{js,ts,jsx,tsx}"
 	],
 	theme: {
@@ -104,7 +104,7 @@ module.exports = {
 			fontFamily: {
 				'sans': ['Cera Round', ...defaultTheme.fontFamily.sans],
 				'hand': ['Juvia', ...defaultTheme.fontFamily.serif],
-				'mono': ['DM Mono', ...defaultTheme.fontFamily.mono]
+				//'mono': ['DM Mono', ...defaultTheme.fontFamily.mono]
 			}
 		},
 	},

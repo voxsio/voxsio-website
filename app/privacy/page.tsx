@@ -1,16 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '../components/Layout';
 
 
-const Privacy: NextPage = () => (
-	<Layout headerStyle="bg-sky">
-		<Head>
-			<title>UB-OK - Privacy policy</title>
-			<meta name="description" content="UB-OK" />
-		</Head>
-
+const Page = () => (
+	<>
 		<div className="flex flex-row items-center bg-sky">
 			<Image
 				src="/images/ubee-safe.png"
@@ -87,7 +79,7 @@ const Privacy: NextPage = () => (
 				<p>If you have any concerns as to how your data is processed please email us at <a href="mailto:chat@voxsio.com">chat@voxsio.com</a>.</p>
 			</div>
 		</div>
-	</Layout>
+	</>
 );
 
-export default Privacy;
+export default Page;
