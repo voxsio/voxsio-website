@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @font-face {
+	font-family: "Cera Round";
+	src: url("../public/fonts/ceraroundpro-regular.otf") format("opentype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Cera Round";
+	src: url("../public/fonts/ceraroundpro-bold.otf") format("opentype");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Cera Round";
+	src: url("../public/fonts/ceraroundpro-black.otf") format("opentype");
+	font-weight: 900;
+}
+
+@font-face {
 	font-family: Juvia;
 	src: url("../public/fonts/juvia.woff2") format("woff2");
 }

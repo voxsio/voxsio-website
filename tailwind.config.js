@@ -102,7 +102,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Nunito', ...defaultTheme.fontFamily.sans],
+				'sans': ['Cera Round', ...defaultTheme.fontFamily.sans],
 				'hand': ['Juvia', ...defaultTheme.fontFamily.serif],
 				'mono': ['DM Mono', ...defaultTheme.fontFamily.mono]
 			}
