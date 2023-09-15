@@ -135,8 +135,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				"sans": ["Cera Round", ...defaultTheme.fontFamily.sans],
-				"hand": ["Juvia", ...defaultTheme.fontFamily.serif]
+				"sans": ["Cera Round", ...defaultTheme.fontFamily.sans]
 			},
 			keyframes: {
 				"marquee": {
