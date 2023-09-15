@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../components/Button";
 import bayes from "./logos/bayes.webp";
 import civtech from "./logos/civtech.webp";
@@ -35,13 +37,19 @@ const Page = () => {
 					<h1 className="text-4xl leading-snug text-center lg:text-left">
 						Support your patients with ethical digital health apps.
 					</h1>
-					<Button className="mt-12 mx-auto lg:mx-0">
+					<Button
+						className="mt-12 mx-auto lg:mx-0"
+						onClick={() => {
+							const el = document.getElementById("storySection");
+							el?.scrollIntoView({ behavior: "smooth" });
+						}}
+					>
 						Find out how
 					</Button>
 				</div>
 			</section>
 
-			<section className="mt-48">
+			<section className="mt-48" id="storySection">
 				<div className="max-w-[600px] mx-auto">
 					<p className="text-2xl font-bold text-center">
 						We believe healthcare should be ethical, engaging, and instantly accessible.
@@ -86,9 +94,11 @@ const Page = () => {
 					</div>
 				</div>
 				<div className="w-fit h-12 mx-auto mt-12">
-					<Button>
-						Contact us
-					</Button>
+					<Link href="/contact">
+						<Button>
+							Contact us
+						</Button>
+					</Link>
 				</div>
 			</section>
 
