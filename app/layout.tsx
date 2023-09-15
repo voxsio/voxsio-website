@@ -53,38 +53,29 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					{children}
 				</main>
 
-				<footer className="relative w-full mt-16">
-					<div className="w-full mt-8 flex flex-row justify-center gap-8">
-						{([
-							["https://twitter.com/ubok_app", Twitter, "text-aqua"],
-							["https://www.instagram.com/ubok_app/", Instagram, "text-pink"],
-							["https://linkedin.com/company/ubok", Linkedin, "text-ocean"]
-						] as [string, Icon, string][]).map(([link, Icon, className]) => (
-							<a
-								key={link}
-								href={link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className={`hover:border-b-0 hover:opacity-80 ${className}`}
-							>
-								<Icon className="w-6 h-6" />
-							</a>
-						))}
-					</div>
-
-
-					<div className="relative w-full min-h-[200px] aspect-[1128/191] border-t-2 border-light-700">
-						<Image
-							src="/images/character_banner.jpg"
-							alt=""
-							fill
-						/>
-
-						<div className="absolute w-fit bottom-8 right-[20%] px-4 py-2 bg-light-300 border-2 border-light-700 rounded-lg">
-							<p className="text-sm mb-0">
-								&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
-							</p>
+				<footer className="relative w-full bg-cover bg-[url(/images/characters_banner.jpg)] min-h-[200px] max-h-[300px] aspect-[1128/191] border-t-2 border-light-700">
+					<div className="absolute w-fit bottom-12 right-[15%] p-4 bg-light-300 border-2 border-light-700 rounded-lg">
+						<div className="w-full flex flex-row justify-evenly gap-8">
+							{([
+								["https://twitter.com/ubok_app", Twitter, "text-aqua-500"],
+								["https://www.instagram.com/ubok_app/", Instagram, "text-pink-500"],
+								["https://linkedin.com/company/ubok", Linkedin, "text-ocean-500"]
+							] as [string, Icon, string][]).map(([link, Icon, className]) => (
+								<a
+									key={link}
+									href={link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={`hover:border-b-0 hover:opacity-80 ${className}`}
+								>
+									<Icon className="w-6 h-6" />
+								</a>
+							))}
 						</div>
+
+						<p className="text-sm mt-4">
+							&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
+						</p>
 					</div>
 				</footer>
 

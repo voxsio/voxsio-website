@@ -136,7 +136,7 @@ const Page = () => {
 				</p>
 			</section>
 
-			<section className="mt-48 w-[calc(100vw-10px)] -ml-[12.5vw] lg:max-w-[988px] lg:mx-auto">
+			<section className="mt-48 mb-72 w-[calc(100vw-10px)] -ml-[12.5vw] lg:max-w-[988px] lg:mx-auto">
 				<h2 className="font-bold text-3xl text-center">
 					Our partners
 				</h2>
@@ -164,8 +164,6 @@ const Page = () => {
 					))}
 				</div>
 			</section>
-
-			<div className="w-full h-80" />
 		</div>
 	);
 };
