@@ -38,7 +38,7 @@ const Page = () => {
 						Support your patients with ethical digital health apps.
 					</h1>
 					<Button
-						className="mt-12 mx-auto lg:mx-0"
+						className="block mt-12 mx-auto lg:mx-0"
 						onClick={() => {
 							const el = document.getElementById("storySection");
 							el?.scrollIntoView({ behavior: "smooth" });

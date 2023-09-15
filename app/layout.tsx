@@ -50,7 +50,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 				</header>
 
 				<main className="relative">
-					{children}
+					{ children }
 				</main>
 
 				<footer className="relative w-full bg-cover bg-[url(/images/characters_banner.jpg)] min-h-[200px] max-h-[300px] aspect-[1128/191] border-t-2 border-light-700">
