@@ -7,8 +7,8 @@ import { Twitter, Instagram, Linkedin, Icon } from "react-bootstrap-icons";
 
 
 export const metadata: Metadata = {
-	title: "Voxsio",
-	description: "Welcome to Voxsio!",
+	title: "Voxsio | Home",
+	description: "Voxsio - support your patients with ethical digital health apps.",
 	icons: {
 		icon: "/favicon.ico"
 	}

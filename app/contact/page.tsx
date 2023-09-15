@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+	title: "Voxsio | Contact",
+	description: "Get in touch! We'd love to hear from you."
+};
+
+
 const Page = () => (
 	<div className="px-8 py-20 mb-16 min-h-[70vh]">
 		<div className="max-w-[500px] mx-auto p-8 bg-light-500 border-2 border-light-700 rounded-lg">

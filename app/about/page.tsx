@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
+
+export const metadata: Metadata = {
+	title: "Voxsio | About",
+	description: "At Voxsio, our team shares a deep passion for creating ethical and innovative digital health products that enhance healthcare and improve lives."
+};
 
 
 const Page = () => (
