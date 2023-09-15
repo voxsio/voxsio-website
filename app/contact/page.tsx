@@ -2,7 +2,7 @@ const Page = () => (
 	<div className="px-8 py-20 mb-16 min-h-[70vh]">
 		<div className="max-w-[500px] mx-auto p-8 bg-light-500 border-2 border-light-700 rounded-lg">
 			<p>
-				Get in touch! We'd love to hear from you at <a href="mailto:chat@ubok.app" className="underline hover:text-red-700">chat@ubok.app</a>.
+				Get in touch! We'd love to hear from you at <a href="mailto:chat@voxsio.com" className="underline hover:text-red-700">chat@voxsio.com</a>.
 			</p>
 
 			<p className="mt-8">

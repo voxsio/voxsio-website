@@ -78,7 +78,7 @@ const Page = () => (
 				<p>If we do hold identifiable information about you and you have any queries about the information we hold, please contact the Information Governance Officer using the details below:</p>
 				<p className="pl-8">IG Officer, Voxsio Ltd, Bayes Centre, 47 Potterrow, Edinburgh EH8 9BT, Scotland</p>
 				<p><i>You have the right to refuse/withdraw consent to information sharing at any time by using the contact details above. If there are any consequences to withdrawing consent these will be fully explained and discussed with you first.</i></p>
-				<p>If you have any concerns as to how your data is processed please email us at <a href="mailto:chat@voxsio.com">chat@voxsio.com</a>.</p>
+				<p>If you have any concerns as to how your data is processed please email us at <a href="mailto:chat@voxsio.com" className="underline hover:text-red-700">chat@voxsio.com</a>.</p>
 			</div>
 		</section>
 	</>

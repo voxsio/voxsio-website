@@ -24,7 +24,7 @@ const Page = () => (
 			</p>
 
 			<p>
-				This part of our website is currently under construction - check back soon or email <a href="mailto:chat@ubok.app" className="underline hover:text-red-700">chat@ubok.app</a> with any questions!
+				This part of our website is currently under construction - check back soon or email <a href="mailto:chat@voxsio.com" className="underline hover:text-red-700">chat@voxsio.com</a> with any questions!
 			</p>
 		</div>
 	</div>
