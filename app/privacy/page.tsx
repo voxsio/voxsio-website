@@ -3,22 +3,24 @@ import Image from 'next/image';
 
 const Page = () => (
 	<>
-		<div className="flex flex-row items-center bg-sky">
+		<section className="mt-12 lg:flex items-center justify-center">
 			<Image
 				src="/images/ubee-safe.png"
 				alt="Our mascot Ubee leaning on a locked chest and giving a thumbs up"
 				width={300}
 				height={300}
-				className="ml-[20%] mr-[10%]"
+				className="mx-auto lg:mx-0"
 				priority
 			/>
-			<h1 className="font-black text-5xl">
-				Privacy policy
-			</h1>
-		</div>
+			<div className="lg:w-96 lg:ml-20">
+				<h1 className="text-4xl leading-snug text-center lg:text-left">
+					Privacy policy
+				</h1>
+			</div>
+		</section>
 
-		<div className="-mt-14 pt-28 pb-10 bg-aqua border-t-4 border-black">
-			<div className="max-w-[800px] mx-auto bg-cream px-14 py-5 rounded-xl">
+		<section className="-mt-14 pt-28 pb-10">
+			<div className="max-w-[800px] mx-auto bg-cream px-14 pt-8 pb-5 rounded-xl [&>p]:mb-6 [&>ul]:mb-6 [&>ol]:mb-6">
 				<h3>Who are we?</h3>
 				<p>
 					Voxsio Ltd developed UB-OK to help young people manage their mental and physical health.
@@ -78,7 +80,7 @@ const Page = () => (
 				<p><i>You have the right to refuse/withdraw consent to information sharing at any time by using the contact details above. If there are any consequences to withdrawing consent these will be fully explained and discussed with you first.</i></p>
 				<p>If you have any concerns as to how your data is processed please email us at <a href="mailto:chat@voxsio.com">chat@voxsio.com</a>.</p>
 			</div>
-		</div>
+		</section>
 	</>
 );
 
