@@ -22,28 +22,28 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<html lang="en">
-			<body className="bg-cream selection:bg-blue-700 selection:text-cream">
-				<header className={`relative h-28 flex items-center`}>
-					<div className="relative h-16 w-[17.5rem] ml-12">
+			<body className="text-[18px] -mb-4 bg-light-300 selection:bg-blue-700 selection:text-light-300">
+				<header className="relative max-w-[988px] mx-auto md:h-28 md:flex md:items-center">
+					<div className="relative h-12 w-60 mt-4 mx-auto md:-mt-2 md:mx-0">
 						<Link href="/">
 							<Image
-								src="/images/logo.png"
-								alt="The UB-OK logo, with the four letters in different colours"
+								src="/images/voxsio.png"
+								alt="The Voxsio wordmark"
 								fill
-								className="object-contain hover:opacity-80 active:opacity-70"
+								className="object-contain hover:opacity-70 active:opacity-50"
 								priority
 							/>
 						</Link>
 					</div>
 
-					<nav className="w-full max-w-[600px] ml-auto flex justify-evenly">
+					<nav className="w-full max-w-[400px] flex justify-evenly my-8 mx-auto md:my-0 md:mr-0">
 						{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
 							<Link
 								key={link}
 								href={link}
-								className="flex flex-col items-center uppercase font-black"
+								className="flex flex-col items-center uppercase font-bold hover:text-red-500"
 							>
-								{title}
+								{ title }
 							</Link>
 						))}
 					</nav>
@@ -53,28 +53,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					{children}
 				</main>
 
-				<footer className="w-full mt-16 mb-8">
-					<div className="w-full max-w-[500px] flex flex-row justify-evenly mx-auto">
-						{[
-							["nhs", "The logo of NHS Scotland"],
-							["sbri", "The logo of SBRI Healthcare"],
-							["uoe", "The logo of the University of Edinburgh"]
-						].map(([name, alt]) => (
-							<div
-								key={name}
-								className="relative w-[20%] aspect-square"
-							>
-								<Image
-									src={`/images/${name}.png`}
-									fill
-									alt={alt}
-									className="object-contain"
-									priority
-								/>
-							</div>
-						))}
-					</div>
-
+				<footer className="relative w-full mt-16">
 					<div className="w-full mt-8 flex flex-row justify-center gap-8">
 						{([
 							["https://twitter.com/ubok_app", Twitter, "text-aqua"],
@@ -93,9 +72,20 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 						))}
 					</div>
 
-					<p className="mt-8 px-8 text-sm text-center">
-						&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
-					</p>
+
+					<div className="relative w-full min-h-[200px] aspect-[1128/191] border-t-2 border-light-700">
+						<Image
+							src="/images/character_banner.jpg"
+							alt=""
+							fill
+						/>
+
+						<div className="absolute w-fit bottom-8 right-[20%] px-4 py-2 bg-light-300 border-2 border-light-700 rounded-lg">
+							<p className="text-sm mb-0">
+								&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
+							</p>
+						</div>
+					</div>
 				</footer>
 
 				<Analytics />
