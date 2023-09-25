@@ -11,6 +11,18 @@ export const metadata: Metadata = {
 	description: "Voxsio - support your patients with ethical digital health apps.",
 	icons: {
 		icon: "/favicon.ico"
+	},
+	themeColor: "#FFF9ED",
+	openGraph: {
+		title: "Voxsio",
+		description: "Support your patients with ethical digital health apps",
+		url: "https://voxsio.com",
+		locale: "en_GB"
+	},
+	twitter: {
+		title: "Voxsio",
+		description: "Support your patients with ethical digital health apps",
+		creator: "@ubok_app"
 	}
 };
 
