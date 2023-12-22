@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import '../styles/globals.scss';
@@ -9,14 +9,14 @@ import { Twitter, Instagram, Linkedin, Icon } from "react-bootstrap-icons";
 export const metadata: Metadata = {
 	title: "Voxsio | Home",
 	description: "Voxsio - support your patients with ethical digital health apps.",
+	metadataBase: new URL("https://voxsio.com"),
 	icons: {
 		icon: "/favicon.ico"
 	},
-	themeColor: "#FFF9ED",
 	openGraph: {
 		title: "Voxsio",
 		description: "Support your patients with ethical digital health apps",
-		url: "https://voxsio.com",
+		url: "/",
 		locale: "en_GB"
 	},
 	twitter: {
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
 		description: "Support your patients with ethical digital health apps",
 		creator: "@ubok_app"
 	}
+};
+
+export const viewport: Viewport = {
+	themeColor: "#FFF9ED"
 };
 
 
@@ -48,16 +52,22 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 						</Link>
 					</div>
 
-					<nav className="w-full max-w-[400px] flex justify-evenly my-8 mx-auto md:my-0 md:mr-0">
+					<nav className="w-full max-w-[600px] flex items-center justify-evenly flex-wrap mx-auto my-4 md:my-0 md:mr-0">
 						{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
 							<Link
 								key={link}
 								href={link}
-								className="flex flex-col items-center uppercase font-bold hover:text-red-500"
+								className="flex flex-col items-center my-2 uppercase font-bold hover:text-red-500"
 							>
 								{ title }
 							</Link>
 						))}
+						<Link
+							href={"/nhsFeasibilityStudy"}
+							className="flex flex-col items-center my-2 px-2 py-1 bg-blue-300/30 rounded-lg uppercase font-bold hover:text-red-500 hover:bg-red-300/30"
+						>
+							NHS Feasibility Study
+						</Link>
 					</nav>
 				</header>
 

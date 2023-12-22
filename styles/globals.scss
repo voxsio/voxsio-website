@@ -30,8 +30,24 @@ h3 {
 	@apply font-bold;
 }
 
+ol {
+	@apply list-decimal ml-8;
+}
+
 li {
 	@apply mt-2;
+}
+
+details {
+	@apply px-4 py-2 mb-4 bg-light-500 border-2 border-light-700 rounded hover:cursor-pointer;
+}
+
+summary {
+	@apply font-semibold;
+
+	details[open] & {
+		@apply mb-2;
+	}
 }
 
 
