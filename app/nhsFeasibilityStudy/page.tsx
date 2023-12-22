@@ -19,7 +19,7 @@ const Page = () => (
 				<Image src={nhsgrampian} alt="NHS Grampian logo" />
 				<Image src={nhstayside} alt="NHS Tayside logo" />
 				<Image src={nhshighland} alt="NHS Highland logo" />
-				<Image src={cso} alt="Chief Scientist Office logo" className="ml-auto mr-0" />
+				<Image src={cso} alt="Chief Scientist Office logo" className="md:ml-auto mr-0" />
 			</div>
 
 			<h1 className="mt-8 mb-12 text-3xl">
