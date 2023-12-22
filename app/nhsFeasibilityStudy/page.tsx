@@ -8,7 +8,7 @@ import nhstayside from "../logos/nhstayside.webp";
 
 export const metadata: Metadata = {
 	title: "Voxsio | NHS Feasibility Study",
-	description: "At Voxsio, our team shares a deep passion for creating ethical and innovative digital health products that enhance healthcare and improve lives."
+	description: "Evaluating a digital application designed to support young people with functional gastrointestinal disorders: a feasibility study."
 };
 
 

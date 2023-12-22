@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import '../styles/globals.scss';
@@ -9,14 +9,14 @@ import { Twitter, Instagram, Linkedin, Icon } from "react-bootstrap-icons";
 export const metadata: Metadata = {
 	title: "Voxsio | Home",
 	description: "Voxsio - support your patients with ethical digital health apps.",
+	metadataBase: new URL("https://voxsio.com"),
 	icons: {
 		icon: "/favicon.ico"
 	},
-	themeColor: "#FFF9ED",
 	openGraph: {
 		title: "Voxsio",
 		description: "Support your patients with ethical digital health apps",
-		url: "https://voxsio.com",
+		url: "/",
 		locale: "en_GB"
 	},
 	twitter: {
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
 		description: "Support your patients with ethical digital health apps",
 		creator: "@ubok_app"
 	}
+};
+
+export const viewport: Viewport = {
+	themeColor: "#FFF9ED"
 };
 
 
