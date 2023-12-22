@@ -48,19 +48,19 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 						</Link>
 					</div>
 
-					<nav className="w-full max-w-[600px] flex items-center justify-evenly flex-wrap my-8 mx-auto md:my-0 md:mr-0">
+					<nav className="w-full max-w-[600px] flex items-center justify-evenly flex-wrap mx-auto md:my-0 md:mr-0">
 						{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
 							<Link
 								key={link}
 								href={link}
-								className="flex flex-col items-center uppercase font-bold hover:text-red-500"
+								className="flex flex-col items-center my-4 uppercase font-bold hover:text-red-500"
 							>
 								{ title }
 							</Link>
 						))}
 						<Link
 							href={"/nhsFeasibilityStudy"}
-							className="flex flex-col items-center px-2 py-1 bg-blue-300/30 rounded-lg uppercase font-bold hover:text-red-500 hover:bg-red-300/30"
+							className="flex flex-col items-center my-4 px-2 py-1 bg-blue-300/30 rounded-lg uppercase font-bold hover:text-red-500 hover:bg-red-300/30"
 						>
 							NHS Feasibility Study
 						</Link>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const Page = () => (
 	<div className="px-8 pt-20 pb-60">
 		<div className="max-w-[650px] mx-auto">
-			<div className="[&>*]:h-[60px] [&>*]:w-auto [&>*]:mr-4 flex flex-row justify-start">
+			<div className="[&>*]:h-[60px] [&>*]:w-auto [&>*]:mr-4 flex flex-row flex-wrap justify-start">
 				<Image src={nhsgrampian} alt="NHS Grampian logo" />
 				<Image src={nhstayside} alt="NHS Tayside logo" />
 				<Image src={nhshighland} alt="NHS Highland logo" />
