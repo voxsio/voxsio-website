@@ -10,29 +10,55 @@ export const metadata: Metadata = {
 
 const Page = () => (
 	<div className="px-8 pt-20 pb-60">
-		<div className="max-w-[550px] mx-auto">
-			<figure className="mb-24">
-				<div className="relative w-full aspect-[1769/1063] mb-4">
-					<Image
-						src="/images/team.png"
-						alt="The UB-OK team posing in front of a window of the Bayes Centre"
-						fill
-						className="border-4 border-blue-700 rounded-lg"
-						priority
-					/>
-				</div>
-				<figcaption>
-					From left to right: Michael McTernan, CEO; Juvia Tian, digital artist; Clarissa Yung, content lead; Ubee, our best friend; Siobhan Brady, sales and marketing lead; and Rayo Verweij, CTO.
-				</figcaption>
-			</figure>
-
-			<p className="mb-4">
+		<div className="max-w-[600px] mx-auto">
+			<p className="mb-8">
 				At Voxsio, our team shares a deep passion for creating ethical and innovative digital health products that enhance healthcare and improve lives.
 			</p>
 
-			<p>
-				This part of our website is currently under construction - check back soon or email <a href="mailto:chat@voxsio.com" className="underline hover:text-red-700">chat@voxsio.com</a> with any questions!
-			</p>
+			<figure className="w-full flex flex-row flex-wrap md:flex-nowrap items-center gap-8 mb-8">
+				<Image
+					src="/images/michael.webp"
+					alt="Michael McTernan"
+					width={200}
+					height={250}
+				/>
+				<figcaption>
+					CEO and founder <strong>Michael McTernan</strong> has been CEO four times, including at Rapid Mobile where he led investment rounds and the sale of the business in 2011. He is a trained NHS counsellor and works with CoCo Counselling one day a week. Michael is also a co-applicant on the Medical Research Council-funded UK-wide DataMind project.
+				</figcaption>
+			</figure>
+			<figure className="w-full flex flex-row-reverse flex-wrap md:flex-nowrap items-center gap-8 mb-8">
+				<Image
+					src="/images/rayo.webp"
+					alt="Rayo Verweij"
+					width={200}
+					height={250}
+				/>
+				<figcaption className="grow">
+					CTO <strong>Rayo Verweij</strong> has been building websites and apps for over 10 years. He is part of the Centre for Doctoral Training in Designing Responsible Natural Language Processing at the University of Edinburgh and has previously conducted research on computational psychiatry and brain imaging.
+				</figcaption>
+			</figure>
+			<figure className="w-full flex flex-row flex-wrap md:flex-nowrap items-center gap-8 mb-8">
+				<Image
+					src="/images/clarissa.webp"
+					alt="Clarissa Yung"
+					width={200}
+					height={250}
+				/>
+				<figcaption>
+					Clinical researcher <strong>Clarissa Yung</strong> manages content research and development in tandem with our partnered clinicians. She is a postgraduate in Human-Computer Interaction at University College London.
+				</figcaption>
+			</figure>
+			<figure className="w-full flex flex-row-reverse flex-wrap md:flex-nowrap items-center gap-8 mb-8">
+				<Image
+					src="/images/juvia.webp"
+					alt="Juvia Tian"
+					width={200}
+					height={250}
+				/>
+				<figcaption className="grow">
+					Digital illustrator <strong>Juvia Tian</strong> brings our applications to life with hundreds of hand-drawn images. She holds an MA in Illustration from the University of Edinburgh.
+				</figcaption>
+			</figure>
 		</div>
 	</div>
 );

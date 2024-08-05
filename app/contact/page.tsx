@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const Page = () => (
 	<div className="px-8 py-20 mb-16 min-h-[70vh]">
-		<div className="max-w-[500px] mx-auto p-8 bg-light-500 border-2 border-light-700 rounded-lg">
+		<div className="max-w-[600px] mx-auto">
 			<p>
 				Get in touch! We'd love to hear from you at <a href="mailto:chat@voxsio.com" className="underline hover:text-red-900">chat@voxsio.com</a>.
 			</p>

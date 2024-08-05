@@ -4,7 +4,7 @@ import Image from 'next/image';
 const NotFound = () => (
 	<section className="w-full min-h-[75vh] lg:min-h-[65vh] mt-12 lg:flex items-center justify-evenly">
 		<Image
-			src={`/images/ubee-internet.png`}
+			src={`/images/ubee-internet.webp`}
 			alt="Our mascot Ubee pointing to an icon representing disconnected internet"
 			width={300}
 			height={300}

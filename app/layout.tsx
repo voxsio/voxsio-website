@@ -2,8 +2,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import '../styles/globals.scss';
+import "../styles/globals.scss";
 import { Twitter, Instagram, Linkedin, Icon } from "react-bootstrap-icons";
+import NavLink from "../components/NavLink";
 
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					<div className="relative h-12 w-60 mt-4 mx-auto md:-mt-2 md:mx-0">
 						<Link href="/">
 							<Image
-								src="/images/voxsio.png"
+								src="/images/voxsio.webp"
 								alt="The Voxsio wordmark"
 								fill
 								className="object-contain hover:opacity-70 active:opacity-50"
@@ -53,21 +54,14 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					</div>
 
 					<nav className="w-full max-w-[600px] flex items-center justify-evenly flex-wrap mx-auto my-4 md:my-0 md:mr-0">
-						{[["/", "Home"], ["/about", "About"], ["/contact", "Contact"]].map(([link, title]) => (
-							<Link
-								key={link}
-								href={link}
-								className="flex flex-col items-center my-2 uppercase font-bold hover:text-red-500"
-							>
-								{ title }
-							</Link>
+						{[
+							["/", "Home"],
+							["/about", "About"],
+							["/contact", "Contact"],
+							["/nhsFeasibilityStudy", "NHS Feasibility Study"]
+						].map(([url, title]) => (
+							<NavLink key={url} url={url} title={title} />
 						))}
-						<Link
-							href={"/nhsFeasibilityStudy"}
-							className="flex flex-col items-center my-2 px-2 py-1 bg-blue-300/30 rounded-lg uppercase font-bold hover:text-red-500 hover:bg-red-300/30"
-						>
-							NHS Feasibility Study
-						</Link>
 					</nav>
 				</header>
 
@@ -75,7 +69,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					{ children }
 				</main>
 
-				<footer className="relative w-full bg-cover bg-[url(/images/characters_banner.jpg)] min-h-[200px] max-h-[300px] aspect-[1128/191] border-t-2 border-light-700">
+				<footer className="relative w-full bg-cover bg-[url(/images/characters_banner.webp)] min-h-[200px] max-h-[300px] aspect-[1128/191] border-t-2 border-light-700">
 					<div className="absolute w-fit bottom-12 right-[15%] p-4 bg-light-300 border-2 border-light-700 rounded-lg">
 						<div className="w-full flex flex-row justify-evenly gap-8">
 							{([

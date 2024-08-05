@@ -12,7 +12,7 @@ const Page = () => (
 	<>
 		<section className="mt-12 lg:flex items-center justify-center">
 			<Image
-				src="/images/ubee-safe.png"
+				src="/images/ubee-safe.webp"
 				alt="Our mascot Ubee leaning on a locked chest and giving a thumbs up"
 				width={300}
 				height={300}
@@ -27,7 +27,7 @@ const Page = () => (
 		</section>
 
 		<section className="-mt-14 pt-28 pb-10">
-			<div className="max-w-[800px] mx-auto bg-cream px-14 pt-8 pb-5 rounded-xl [&>p]:mb-6 [&>ul]:mb-6 [&>ol]:mb-6">
+			<div className="max-w-[800px] mx-auto bg-light-500 border-2 border-light-700 px-14 pt-8 pb-5 rounded-xl [&>p]:mb-6 [&>ul]:mb-6 [&>ol]:mb-6">
 				<h3>Who are we?</h3>
 				<p>
 					Voxsio Ltd developed UB-OK to help young people manage their mental and physical health.
