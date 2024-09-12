@@ -58,7 +58,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 							["/", "Home"],
 							["/about", "About"],
 							["/contact", "Contact"],
-							["/nhsFeasibilityStudy", "NHS Feasibility Study"]
+							// ["/nhsFeasibilityStudy", "NHS Feasibility Study"]
 						].map(([url, title]) => (
 							<NavLink key={url} url={url} title={title} />
 						))}
