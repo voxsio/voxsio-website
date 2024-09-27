@@ -90,7 +90,11 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 						</div>
 
 						<p className="text-sm mt-4">
-							&copy; Voxsio {new Date().getFullYear()}. <Link href="/privacy">Privacy policy</Link>
+							<Link href="/privacy">Privacy policy</Link>&nbsp;&middot;&nbsp;<Link href="/modern-slavery">Modern slavery</Link>
+						</p>
+
+						<p className="text-sm text-center">
+							&copy; Voxsio {new Date().getFullYear()}
 						</p>
 					</div>
 				</footer>
