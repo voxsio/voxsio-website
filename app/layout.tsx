@@ -40,6 +40,11 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<html lang="en">
 			<body className="text-[18px] -mb-4 bg-light-300 selection:bg-blue-700 selection:text-light-300">
+				<div className="bg-red-700 p-2">
+					<p className="text-white text-center">
+						Voxsio has ceased operations as of March 2025. Thank you to everybody who played a part in our journey!
+					</p>
+				</div>
 				<header className="relative max-w-[988px] mx-auto md:h-28 md:flex md:items-center">
 					<div className="relative h-12 w-60 mt-4 mx-auto md:-mt-2 md:mx-0">
 						<Link href="/">
